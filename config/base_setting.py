@@ -1,15 +1,16 @@
 SERVER_PORT = 9000
-SQLALCHEMY_DATABASE_URI = 'mysql://root:LCM123456@192.144.237.95/hmsc_db?charset=utf8'
-SQLALCHEMY_TRACK_MODIFICATIONS = False 
+SQLALCHEMY_DATABASE_URI = 'mysql://root:123456@127.0.0.1/hmsc_db?charset=utf8'
+SQLALCHEMY_TRACK_MODIFICATIONS = False
+SQLALCHEMY_ECHO = False
+# Cookie 
+AUTH_COOKIE_NAME = "hmsc_1901C"
 
-# cookie
-AUTH_COOKIE_NAME='hsmc_1901c'
-
-# 设置拦截器的忽略规则
+# 设置拦截器忽略规则
 IGNORE_URLS = [
-    '^/user/login'
+    "^/user/login"
 ]
-IGNORE_CHECK_LOGIN_URLS =[
-    '^/static',
-    '/favicon.ico'
+IGNORE_CHECK_LOGIN_URLS = [
+    "^/static",
+    "^/favicon.ico"
 ]
+
